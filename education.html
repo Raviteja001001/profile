@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #1c1c1c;
+            color: #fff;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #ff6f61, #f8b500);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            animation: slideIn 1.2s ease-out;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap; /* Enable responsive wrapping */
+            gap: 20px;
+            justify-content: space-between; /* Spread items on large screens */
+        }
+
+        /* Education Card */
+        .education-card {
+            flex: 1 1 calc(33.333% - 40px); /* Default: 3 cards per row */
+            min-width: 280px; /* Ensure cards don't shrink too small */
+            max-width: 320px;
+            padding: 20px;
+            background: linear-gradient(135deg, #333, #444);
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #444, #555);
+        }
+
+        .education-card h2 {
+            font-size: 1.8rem;
+            color: #f8b500;
+            margin: 0 0 10px;
+        }
+
+        .education-card p {
+            margin: 5px 0;
+            color: #ddd;
+        }
+
+        .education-card .skills {
+            margin-top: 10px;
+            font-style: italic;
+            color: #ff6f61;
+        }
+
+        .education-card:before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 80%);
+            transform: rotate(45deg);
+            transition: opacity 0.4s ease-in-out;
+            opacity: 0;
+            z-index: 0;
+        }
+
+        .education-card:hover:before {
+            opacity: 0.2;
+        }
+
+        /* Back Button */
+        .back-button-container {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: #0077b6;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        .back-button:hover {
+            background: #005082;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #bbb;
+        }
+
+        footer a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack cards vertically */
+                gap: 15px; /* Smaller gaps between cards */
+            }
+
+            .education-card {
+                width: 100%; /* Full-width for mobile screens */
+                max-width: none;
+            }
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Education</h1>
+</header>
+
+<div class="container">
+
+    <!-- Education Card 1 -->
+    <div class="education-card">
+        <h2>B.Tech in Computer Science and Engineering</h2>
+        <p><strong>Institution:</strong> Mother Theresa Institute of Engineering and Technology</p>
+        <p><strong>Location:</strong> Palamaner</p>
+        <p><strong>Year:</strong> August 2021 – May 2025</p>
+        <p><strong>GPA:</strong> 7.5 / 10</p>
+    </div>
+
+    <!-- Education Card 2 -->
+    <div class="education-card">
+        <h2>Intermediate (M.P.C)</h2>
+        <p><strong>Institution:</strong> Sri Gayatri Junior College</p>
+        <p><strong>Location:</strong> Tirupati</p>
+        <p><strong>Year:</strong> August 2019 – May 2021</p>
+        <p><strong>GPA:</strong> 7.6 / 10</p>
+    </div>
+
+    <!-- Education Card 3 -->
+    <div class="education-card">
+        <h2>High School (S.S.C)</h2>
+        <p><strong>Institution:</strong> Z.P.H.S</p>
+        <p><strong>Location:</strong> Chowdepalli</p>
+        <p><strong>Year:</strong> August 2018 – May 2019</p>
+        <p><strong>GPA:</strong> 9.0 / 10</p>
+    </div>
+
+</div>
+
+
+<div class="back-button-container">
+    <a class='back-button' href='/'>← Go Back</a>
+</div>
+
+<footer>
+    <p>© 2024 Raviteja| <a href="https://www.linkedin.com/in/ravitejap-p-05b4a42b5/" target="_blank">LinkedIn</a></p>
+</footer>
+
+</body>
+</html>

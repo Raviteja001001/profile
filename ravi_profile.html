@@ -1,0 +1,529 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Raviteja Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 35px 12%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            color: orangered;
+            font-weight: 600;
+            text-shadow: 0 0 25px orangered, 0 0 50px rgb(89, 26, 2);
+            transform: scale(1.1);
+            transition: 0.3s ease;
+        }
+
+        span {
+            color: orangered;
+        }
+
+        .navbar a {
+            font-size: 18px;
+            color: white;
+            font-weight: 500;
+            margin: 0 20px;
+            border-bottom: 3px solid transparent;
+            transition: 0.3s ease;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: orangered;
+        }
+
+        .contact {
+            border-bottom: 3px solid orangered;
+            padding: 10px 28px;
+            background-color: white;
+            color: black;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .contact:hover {
+            background-color: orangered;
+            box-shadow: 0 0 25px orangered;
+            color: white;
+        }
+
+        .home {
+            width: 100%;
+            min-height: 80vh;
+            background: rgb(241, 241, 241);
+            display: flex;
+            align-items: center;
+            gap: 7em;
+            padding: 25px 12% 0;
+            justify-content: center;
+            height: 85vh;
+            margin: 0;
+            text-align: justify;
+        }
+
+        .home-content {
+            max-width: 800px;
+        }
+
+        .home-content h3 {
+            font-size: 42px;
+        }
+
+        .home-content h1 {
+            font-size: 62px;
+            line-height: 1.2;
+        }
+
+        .home-content p {
+            font-size: 18px;
+            margin: 25px 0 30px;
+        }
+
+
+        .btn-box {
+            width: 345px;
+            display: flex;
+            gap: 2em;
+        }
+
+        .btn-1 {
+            padding: 15px 28px;
+            background-color: black;
+            color: white;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-1:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+        }
+
+        .btn-2 {
+            padding: 15px 28px;
+            background-color: orangered;
+            color: white;
+            border: 2px solid black;
+            border-radius: 8px;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-2:hover {
+            background-color: white;
+            color: orangered;
+        }
+
+        .img-box img {
+            border-radius: 50%;
+            width: 370px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: orangered;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: rgba(0, 0, 0 , 0.6);
+            width: 50px;
+        }
+
+        .about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8% 8%;
+            gap: 10em;
+            background: black;
+            height: 80vh;
+            margin: 0;
+            text-align: justify;
+        }
+
+        .about-img img {
+            width: 400px;
+            border-radius: 50%;
+        }
+
+        .about-content h2 {
+            text-align: left;
+            color: white;
+            font-size: 42px;
+        }
+
+        .about-content p {
+            color: white;
+            font-size: 20px;
+            margin: 2em 0 3em;
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            margin-top: 3em;
+            margin-bottom: 1em;
+            font-size: 36px;
+        }
+
+        .contact-form form {
+            max-width: 50em;
+            margin: 1rem auto;
+            text-align: center;
+            margin-bottom: 3em;
+        }
+
+        .contact-form .input-box {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-form form .input-box input,
+        .contact-form form textarea {
+            width: 100%;
+            padding: 1.5em;
+            font-size: 18px;
+            color: black;
+            background: rgb(241, 241, 241);
+            border-radius: .8rem;
+            margin: 1rem 0;
+            resize: none;
+        }
+
+        .footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            padding: 40px 0;
+            background-color: black;
+        }
+
+        .footer .social {
+            text-align: center;
+            padding-bottom: 25px;
+            color: white;
+        }
+
+        .footer .social a {
+            font-size: 24px;
+            color: white;
+            border: 2px solid orangered;
+            width: 40px;
+            height: 40px;
+            line-height: 38px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            margin: 8px;
+            box-shadow: inset 0 0 10px orangered;
+        }
+
+        .footer .social a:hover {
+            transform: scale(1.2) translateY(-10px);
+            color: orangered;
+            border: 2px solid orangered;
+        }
+
+        .footer ul {
+            margin-top: 0;
+            padding: 0;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .footer ul li a {
+            color: white;
+            border-bottom: 3px solid transparent;
+            transition: 0.3s ease;
+        }
+
+        .footer ul li a:hover {
+            border-bottom: 3px solid orangered;
+        }
+
+        .footer ul li {
+            display: inline-block;
+            padding: 0 15px;
+        }
+
+        .footer .copyright {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: white;
+        }
+
+        .btn-box .d-CV {
+            background: var(--gradient-white-bg2);
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: 500;
+            color: red;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0,
+                        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            transition: all .3s ease;
+        }
+
+        .btn-box .btn1 {
+            background: black;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: 500;
+            color: white;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0,
+                        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            transition: all .3s ease;
+        }
+
+        .social-media {
+            padding-top: 70px;
+            display: flex;
+            justify-content: space-between;
+            width: 220px;
+            height: 45px;
+        }
+
+        .social-media a {
+            width: 46px;
+            height: 46px;
+ font-size: 1.5rem;
+            margin-left: 10px;
+            color: green;
+            background: #fff;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            transition: .4s;
+            border-radius: 70%;
+            z-index: 1;
+        }
+
+        .social-media a:hover {
+            background: var(--gradient-color-bg);
+            color: #fff;
+        }
+
+        .bg-icon {
+            position: absolute;
+            padding-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg-icon span {
+            position: relative;
+            width: 60px;
+            padding-right: 30px;
+            height: 50px;
+            background: var(--gradient-color-bg);
+            border-radius: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: animate 1s linear infinite;
+            margin-left: 15px;
+        }
+
+        
+    </style>
+<style>
+        /* Existing CSS */
+        ...
+        
+        /* For mobile screens */
+        @media (max-width: 726px) {
+            .header {
+                padding: 8% 8%; /* Reduced padding for mobile */
+            }
+
+            .home {
+                padding: 20px 8%;
+                height:50vh; /* Adjusted padding for home section */
+            }
+
+            .about {
+                padding: 6% 6%; /* Adjusted padding for about section */
+                gap: 5em; /* Reduced gap for smaller screens */
+            }
+
+            .contact-form {
+                padding: 10px; /* Reduced padding for contact form */
+            }
+        }
+
+        /* For larger screens (default desktop styles) */
+        @media (min-width: 769px) {
+            .header {
+                padding: 35px 12%; /* Default desktop padding */
+            }
+
+            .home {
+                padding: 25px 12%; /* Default padding for home section */
+            }
+
+            .about {
+                padding: 8% 8%; /* Default padding for about section */
+                gap: 10em; /* Default gap for larger screens */
+            }
+
+            .contact-form {
+                padding: 20px; /* Default padding for contact form */
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <a href="#" class="logo">FullStack<span> Developer</span></a>
+    <nav class="navbar">
+        <a href="#" >Portfolio</a>
+        <a href='certifications.html'>Certifications</a>
+        <a href='experience.html'>Experience</a>
+        <a href='project.html'>Projects</a>
+        <a href='education.html'>Education</a>
+    </nav>
+    <a href="https://wa.me/919603832514" class="contact">Contact Me</a>
+</header>
+
+<section class="home">
+    <div class="home-content">
+        <h3>Hi</h3>
+        <h1>I'm Raviteja<br>
+            <div class="rotate-text">
+                <div class="text-animate">
+                    <h1>Full Stack Developer</h1>
+                </div>
+            </div>
+        </h1>
+        <p>
+            As a Full Stack Developer, I specialize in building dynamic and responsive web applications from front-end to back-end. I have experience working with modern technologies like HTML, CSS, JavaScript, React, Node.js, and databases such as MongoDB and MySQL. I enjoy creating user-friendly interfaces, optimizing performance, and developing robust APIs that solve real-world problems. My goal is to deliver clean, maintainable code and scalable solutions for businesses and users alike.
+          </p>
+          
+        <div class="btn-box">
+            <a href="mailto:ravitejap02529@gmail.com?subject=Hiring%20Inquiry&body=Hello,%20I%20would%20like%20to%20discuss%20hiring%20opportunities." class="btn1">
+                Hire Me Now! <i class='bx bx-right-arrow-alt'></i>
+              </a>              
+            <a href="PRavitejaResume.pdf">Download CV <i class='bx bx-download'></i></a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/ravitejap-p-05b4a42b5/"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://x.com/ravitejap1122/"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.instagram.com/ravi.raviteja.391/"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href ="https://github.com/Raviteja001001/"><i class='bx bxl-github'></i></a>
+        </div>
+    </div>
+    <div class="img-box">
+        <img src="ravi.jpeg" alt="Image of Raviteja">
+    </div>
+</section>
+
+<section class="about">
+    <div class="about-img">
+        <img src="ravi.jpeg" alt="Image of Raviteja">
+    </div>
+    <div class="about-content">
+    <h2 class="heading">About <span>Me</span></h2>
+    <h2 style="font-size: 60px;">Full Stack<span> Developer</span></h2>
+    <p>A Full Stack Developer is a versatile programmer skilled in both front-end and back-end development. They build complete web applications, working on everything from designing responsive user interfaces to developing server-side logic, managing databases, and deploying applications. Full Stack Developers are proficient in technologies like HTML, CSS, JavaScript, React, Node.js, and databases such as MongoDB or MySQL, ensuring seamless user experiences and robust application functionality.</p>
+    <a class='btn-2' href='experience.html'>Experience</a>
+</div>
+</section>
+
+<section class="contact-form">
+    <h2>Contact <span>Me</span></h2>
+    <form id="contactForm">
+        <div class="input-box">
+            <input type="text" name="fullName" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="input-box">
+            <input type="number" name="phone" placeholder="Phone Number" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+        </div>
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button type="submit" class="btn-1">Send Message</button>
+    </form>
+</section>
+
+<script>
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const formObject = Object.fromEntries(formData.entries());
+        formObject.date = new Date().toLocaleString();
+
+        const submissions = JSON.parse(localStorage.getItem("submissions")) || [];
+        submissions.push(formObject);
+        localStorage.setItem("submissions", JSON.stringify(submissions));
+        form.reset();
+        alert("Message sent successfully!");
+    });
+</script>
+
+<footer class="footer">
+    <div class="social">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="https://www.linkedin.com/in/ravitejap-p-05b4a42b5/"><i class='bx bxl-linkedin'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="https://www.instagram.com/ravi.raviteja.391/"><i class='bx bxl-instagram'></i></a>
+    </div>
+    <ul class="list">
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+    </ul>
+    <p class="copyright">© 2024 Raviteja | All Rights Reserved</p>
+</footer>
+</body>
+</html>

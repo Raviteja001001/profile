@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .project {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 5px solid #4caf50;
+            background-color: #e8f5e9;
+            border-radius: 4px;
+        }
+
+        .project-title {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .description {
+            margin-bottom: 10px;
+        }
+
+        .skills {
+            font-style: italic;
+            color: #555;
+        }
+
+        a {
+            color: #4caf50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Back Button */
+        .back-button-container {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: #0077b6;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        .back-button:hover {
+            background: #005082;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+                max-width: 100%;
+                padding: 15px;
+                box-shadow: none;
+            }
+
+            .project {
+                padding: 10px;
+            }
+
+            header {
+                padding: 15px;
+            }
+
+            .back-button {
+                width: 100%;
+                max-width: 300px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Projects</h1>
+    </header>
+
+    <div class="container">
+
+    <!-- Project 1 -->
+    <div class="project">
+        <h2 class="project-title">Online Exam Management System</h2>
+        <p class="description">
+            Online Exam Management System is designed to streamline the process of conducting online examinations.
+            Developed a web-based platform using JavaScript, HTML, and CSS for the front-end, and Java, JSP, and SQL for the back-end.
+        </p>
+        <p class="skills"><strong>Skills:</strong> HTML, CSS, JavaScript, Java, JSP, SQL</p>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project">
+        <h2 class="project-title">YouTube Transcript Summarizer</h2>
+        <p class="description">
+            A mini-project developed between August and September 2022 that automatically generates a summary of YouTube video content by analyzing the audio transcript.
+            Built using front-end technologies to enhance user experience.
+        </p>
+        <p class="skills"><strong>Skills:</strong> HTML, CSS, JavaScript</p>
+    </div>
+
+</div>
+
+    <div class="back-button-container">
+        <a class='back-button' href='/'>← Go Back</a>
+    </div>
+
+    <footer>
+        <p>© 2024 Raviteja</p>
+    </footer>
+</body>
+</html>
